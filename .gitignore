@@ -1,0 +1,36 @@
+# macOS / editors
+.DS_Store
+**/.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Dependencies
+node_modules/
+web/node_modules/
+
+# Frontend build output
+web/dist/
+
+# Runtime data: imported media, edit projects, and generated exports
+data/
+workspace/
+output/
+
+# Locally built/downloaded Whisper assets
+vendor/bin/
+vendor/models/
+vendor/whisper.cpp/
+
+# Environment and logs
+.env
+.env.*
+!.env.example
+*.log
+*.pid
+
+# Temporary files and local change bundles
+*.tmp
+*.part
+*.zip
+coverage/

@@ -1,0 +1,32 @@
+{
+  "name": "video-cut",
+  "version": "1.0.0",
+  "private": true,
+  "description": "绘本朗读剪辑台：视频提取音频 + Whisper 识别 + 图文对齐 + 可视化剪辑 + 合成视频/PDF",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "setup": "bash scripts/setup.sh",
+    "build": "npm --prefix web run build",
+    "test": "node --test test/*.test.js",
+    "dev:server": "node --watch server/index.js",
+    "dev:web": "npm --prefix web run dev",
+    "serve": "node server/index.js",
+    "start": "pm2 start ecosystem.config.cjs",
+    "stop": "pm2 stop ecosystem.config.cjs",
+    "restart": "pm2 restart ecosystem.config.cjs",
+    "logs": "pm2 logs video-cut"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.9",
+    "express": "^4.22.3",
+    "ffmpeg-static": "^5.3.0",
+    "multer": "^2.4.0",
+    "pdf-lib": "^1.17.1",
+    "pinyin-pro": "^3.29.4",
+    "pm2": "5.4.2",
+    "sharp": "^0.35.4"
+  }
+}
